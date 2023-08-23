@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{% static 'mystyles.css' %}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+
+<body style="padding: 25px;">
+
+    <div class="main">
+
+        <h2>Hello {{ firstname }}! How are you?</h2>
+
+        <table border='1'>
+            <tr>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Label</th>
+                <th>Release Date</th>
+                <th>ID</th>
+            </tr>
+            {% for x in myrecords %}
+            <tr>
+                <td>{{ x.artist }}</td>
+                <td>{{ x.album }}</td>
+                <td>{{ x.record_label }}</td>
+                <td>{{ x.released }}</td>
+                <td>{{ x.id }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+</body>
+
+</html>

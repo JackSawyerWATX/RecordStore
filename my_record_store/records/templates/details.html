@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+
+<body>
+    {% extends "master.html" %}
+
+    {% block title %}
+        Details about {{ myrecord.artist }} {{ myrecord.album }}
+    {% endblock %}
+
+    {% block content %}
+        <div class="mycard">
+            <h1>{{ myrecord.artist }} -- {{ myrecord.album }}</h1>
+            <p>Label: {{ myrecord.record_label }}</p>
+            <p>Release Date: {{ myrecord.released }}</p>
+           <p>Back to <a href="/records">Records</a></p>
+       </div>
+    {% endblock %}
+</body>
+
+</html>

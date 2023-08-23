@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Records</title>
+</head>
+
+<body>
+
+    {% extends "master.html" %}
+
+    {% block title %}
+    Django Records, Tapes, & Compact Discs - List of all Records
+    {% endblock %}
+
+    {% block content %}
+    <div class="mycard">
+
+        <h1>Records</h1>
+
+        <ul>
+            {% for x in myrecords %}
+            <li onclick="window.location = 'details/{{ x.id }}'">{{ x.artist }} - {{ x.album }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endblock %}
+
+</body>
+
+</html>
