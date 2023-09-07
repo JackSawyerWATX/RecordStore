@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'records',
-    'bootstrap5',
+    # 'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'my_record_store.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'masteruser',
+        'PASSWORD': '12345678',
+        'HOST': 'Record-store-env.eba-vv5wakme.us-east-1.elasticbeanstalk.com',
+        'PORT': '5432'
     }
 }
 
