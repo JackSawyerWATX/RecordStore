@@ -1,0 +1,8 @@
+my_record_store>py manage.py createsuperuser
+Username: jonathan
+Email address: jonathan.fausset@me.com
+Password: djangorecords
+Password (again): djangorecords
+Superuser created successfully.
+
+Configuration validation exception: Invalid option specification (Namespace: 'aws:elasticbeanstalk:managedactions', OptionName: 'ManagedActionsEnabled'): You can't enable managed platform updates when your environment uses the service-linked role 'AWSServiceRoleForElasticBeanstalk'. Select a service role that has the 'AWSElasticBeanstalkManagedUpdatesCustomerRolePolicy' managed policy.
