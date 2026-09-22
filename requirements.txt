@@ -2,7 +2,7 @@ asgiref==3.7.2
 beautifulsoup4==4.12.2
 Django==5.2.16
 django-bootstrap-v5==1.0.11
-soupsieve==2.8.4
+soupsieve==2.9
 sqlparse==0.6.0
 tzdata==2023.3
 whitenoise==6.5.0
